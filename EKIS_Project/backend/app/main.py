@@ -49,6 +49,7 @@ def create_application() -> FastAPI:
         docs_url=None if is_production else "/docs",
         redoc_url=None if is_production else "/redoc",
         openapi_url=None if is_production else "/openapi.json",
+        lifespan=lifespan,
     )
 
     # Security headers on every response (must be added before CORS middleware).
